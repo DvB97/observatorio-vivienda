@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'dim';
+    src: url('src/fuentes/din1451alt.ttf') format('truetype');
+  }
+
+.nav-color-personalizado {
+    background-color: #C00000;
+}
+
+.navbar .nav-link.titulo_menu {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    font: dim;
+}
+
+
+@media all and (min-width: 992px) {
+    .dropdown-menu li {
+        position: relative;
+    }
+
+    .dropdown-menu .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+    }
+
+    .dropdown-menu .submenu-left {
+        right: 100%;
+        left: auto;
+    }
+
+    .dropdown-menu>li:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+    }
+}
+@media (max-width: 991px) {
+    .dropdown-menu .dropdown-menu {
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+}

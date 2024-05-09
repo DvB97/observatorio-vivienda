@@ -1,0 +1,1 @@
+export const DASH_POWER_BI_UNO = 'https://app.powerbi.com/view?r=eyJrIjoiMGQ4ZWNhMzAtNWM1ZC00ZmQ4LWIxMDktYThmNTZlNGJlYzg3IiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9'
