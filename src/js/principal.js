@@ -42,3 +42,7 @@ window.addEventListener('DOMContentLoaded', event => {
 $(document).ready(function () {
     $("#dataMonitoreo").load("./src/views/comp/monitoreo/cards.html");
 });
+
+$(document).ready(function () {
+    $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html");
+});

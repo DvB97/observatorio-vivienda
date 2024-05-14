@@ -35,8 +35,14 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $("#4_publicaciones_vivienda_pae2021_estudio1").click(function () {
-        $("#body").load("./src/views/comp/4_publicaciones/vivienda/pae2021/estudio1.html");
+    $("#4_publicaciones_vivienda_pae2021_estudio1_pnvr2019").click(function () {
+        $("#body").load("./src/views/comp/4_publicaciones/vivienda/pae2021/estudio1_pnvr2019.html");
+    })
+})
+
+$(document).ready(function () {
+    $("#4_publicaciones_vivienda_pae2021_estudio2_percepciones2019").click(function () {
+        $("#body").load("./src/views/comp/4_publicaciones/vivienda/pae2021/estudio2_percepciones2019.html");
     })
 })
 

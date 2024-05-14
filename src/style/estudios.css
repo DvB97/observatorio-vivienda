@@ -1,0 +1,9 @@
+.chart-container {
+    background-color: #fff6f6;
+    border-radius: 5%;
+    width: 70%px;
+    height: 20%px;
+    margin: 50px auto;
+    position: relative;
+    padding: 2%;
+}
