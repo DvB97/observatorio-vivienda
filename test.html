@@ -1,100 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar Chart Example</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <title>Mapa del Perú por Departamentos</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        #map {
+            width: 20%;
+            height: 70vh;
+            margin: 0 auto;
+            text-align: left;
         }
-
-        .chart-container {
-            width: 400px;
-            height: 400px;
-            margin: 50px auto;
-            position: relative;
+        .label {
+            padding: 1px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="chart-container">
-        <canvas id="barChart"></canvas>
+    <div class="row">
+        <div class="col">
+            <div id="map"></div>
+        </div>
     </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        // Datos para el gráfico de barras
-        const data = {
-            labels: ['PNVR', 'PNSR', 'PMIB', 'DGPPVU', 'PASLC', 'PIASAR', 'PNSU'],
-            datasets: [{
-                label: 'Cantidad',
-                data: [12, 9, 5, 3, 1, 1, 1],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.7)', // Rojo
-                    'rgba(54, 162, 235, 0.7)', // Azul
-                    'rgba(255, 206, 86, 0.7)', // Amarillo
-                    'rgba(75, 192, 192, 0.7)', // Verde
-                    'rgba(153, 102, 255, 0.7)', // Morado
-                    'rgba(255, 159, 64, 0.7)', // Naranja
-                    'rgba(70, 191, 189, 0.7)' // Turquesa
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(70, 191, 189, 1)'
-                ],
-                borderWidth: 1
-            }]
-        };
+        // Inicializa el mapa
+        var map = L.map('map').setView([-9.19, -75.015], 5);
 
-        // Opciones para el gráfico de barras
-        const options = {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Ejemplo de Gráfico de Barras'
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            },
-            plugins: {
-                datalabels: {
-                    color: '#fff',
-                    anchor: 'end',
-                    align: 'start',
-                    offset: 10,
-                    formatter: (value, ctx) => {
-                        return value;
-                    }
-                }
-            }
-        };
+        // Añade una capa base
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-        // Obtener el elemento canvas
-        const ctx = document.getElementById('barChart').getContext('2d');
+        // Estilo para los departamentos
+        function style(feature) {
+            return {
+                fillColor: '#C00000',
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
 
-        // Crear el gráfico de barras
-        const barChart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: options,
-            plugins: [ChartDataLabels]
+        // Función para manejar los eventos de clic en los departamentos
+        function onEachFeature(feature, layer) {
+            // Obtener el centro del polígono
+            var centroid = layer.getBounds().getCenter();
+
+            // Crear una etiqueta con el nombre del departamento
+            var label = L.marker(centroid, {
+                icon: L.divIcon({
+                    className: 'label',
+                    html: feature.properties.NOMBDEP,
+                    //iconSize: [70, 30]
+                })
+            }).addTo(map);
+
+            // Mostrar la etiqueta al hacer clic en el departamento
+            layer.on('click', function() {
+                alert("Hiciste clic en el departamento de " + feature.properties.NOMBDEP);
+            });
+        }
+
+        // URL del archivo GeoJSON con los departamentos del Perú
+        var geojsonURL = 'https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_departamental_simple.geojson';
+
+        // Carga el archivo GeoJSON y añade los departamentos al mapa
+        $.getJSON(geojsonURL, function(data) {
+            L.geoJson(data, {
+                style: style,
+                onEachFeature: onEachFeature
+            }).addTo(map);
         });
     </script>
 </body>

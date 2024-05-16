@@ -55,6 +55,15 @@ $(document).ready(function () {
     })
 })
 
+$(document).ready(function () {
+    $("#clickMesasDeAsistenciaTecnica").click(function () {
+        $("#body").load("./src/views/landing.html");
+        setTimeout(function () {
+            $("#body").load("./src/views/comp/mat/mat.html");
+        }, 600);        
+    })
+})
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".dropdown-menu").forEach(function (element) {
