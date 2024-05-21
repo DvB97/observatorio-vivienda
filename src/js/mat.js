@@ -30,14 +30,17 @@ function onEachFeature(feature, layer) {
 
     layer.on('click', function () {
         var departamento = feature.properties.NOMBDEP.trim().toUpperCase();
-        if (!departamentosPeru.includes(departamento)) {
+        var indice = departamentosPeru.indexOf(departamento)
+        if (indice === -1) {
             Swal.fire({
                 title: "MESA DE TRABAJO EN PROGRAMACIÓN",
                 text: `Se viene coordinando la instalación de la MAT en el departamento de ${departamento}. Pronto tendremos novedades.`,
-            });
-            return
+            }); return
         }
-        window.open('https://app.powerbi.com/view?r=eyJrIjoiNWNhY2NlYTAtYzczMy00YTQ0LWE4OWEtNTBjODY1M2ExODhiIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9')
+        $("#body").load("./src/views/landing.html");
+        setTimeout(function () {
+            $("#body").load(linkPath[indice]);
+        }, 300);
     });
 }
 
@@ -63,6 +66,12 @@ var departamentosPeruTilde = [
     'UCAYALI'
 ];
 
+var linkPath = [
+    './src/views/comp/mat/mat.html',
+    './src/views/comp/mat/matSanMartin.html',
+    './src/views/comp/mat/mat.html',
+];
+
 $(document).ready(function () {
     $(".clickDepartamento").each(function () {
         var departamento = $(this).text().trim().toUpperCase();
@@ -76,11 +85,15 @@ $(document).ready(function () {
 
 $(document).on("click", ".clickDepartamento", function () {
     var departamento = $(this).text().trim().toUpperCase();
-    if (!departamentosPeruTilde.includes(departamento)) {
+    var indice = departamentosPeruTilde.indexOf(departamento)
+    if (indice === -1) {
         Swal.fire({
             title: "MESA DE TRABAJO EN PROGRAMACIÓN",
             text: `Se viene coordinando la instalación de la MAT en el departamento de ${departamento}. Pronto tendremos novedades.`,
         }); return
     }
-    window.open('https://app.powerbi.com/view?r=eyJrIjoiNWNhY2NlYTAtYzczMy00YTQ0LWE4OWEtNTBjODY1M2ExODhiIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9')
+    $("#body").load("./src/views/landing.html");
+    setTimeout(function () {
+        $("#body").load(linkPath[indice]);
+    }, 300);
 });
