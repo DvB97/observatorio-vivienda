@@ -95,23 +95,18 @@
 
 .card {
   display: block;
-  /* Mostrar el carrusel por defecto */
 }
 
 .card-mobile {
   display: none;
-  /* Ocultar la lista en pantallas grandes */
 }
 
-/* Estilos específicos para dispositivos móviles */
 @media screen and (max-width: 1700px) {
   .card {
     display: none;
-    /* Ocultar el carrusel en dispositivos móviles */
   }
 
   .card-mobile {
     display: block;
-    /* Mostrar la lista en dispositivos móviles */
   }
 }

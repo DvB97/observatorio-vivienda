@@ -1,85 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa del Perú por Departamentos</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        #map {
-            width: 20%;
-            height: 70vh;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .label {
-            padding: 1px;
-            border-radius: 5px;
-            font-size: 10px;
-            font-weight: bold;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="row">
-        <div class="col">
-            <div id="map"></div>
-        </div>
-    </div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        // Inicializa el mapa
-        var map = L.map('map').setView([-9.19, -75.015], 5);
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        // Añade una capa base
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+html, body {
+  height: 100%;
+}
 
-        // Estilo para los departamentos
-        function style(feature) {
-            return {
-                fillColor: '#C00000',
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
-                fillOpacity: 0.7
-            };
-        }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
-        // Función para manejar los eventos de clic en los departamentos
-        function onEachFeature(feature, layer) {
-            // Obtener el centro del polígono
-            var centroid = layer.getBounds().getCenter();
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-            // Crear una etiqueta con el nombre del departamento
-            var label = L.marker(centroid, {
-                icon: L.divIcon({
-                    className: 'label',
-                    html: feature.properties.NOMBDEP,
-                    //iconSize: [70, 30]
-                })
-            }).addTo(map);
+main {
+  flex: 1;
+}
 
-            // Mostrar la etiqueta al hacer clic en el departamento
-            layer.on('click', function() {
-                alert("Hiciste clic en el departamento de " + feature.properties.NOMBDEP);
-            });
-        }
+.footer {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 7px;
+}
 
-        // URL del archivo GeoJSON con los departamentos del Perú
-        var geojsonURL = 'https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_departamental_simple.geojson';
-
-        // Carga el archivo GeoJSON y añade los departamentos al mapa
-        $.getJSON(geojsonURL, function(data) {
-            L.geoJson(data, {
-                style: style,
-                onEachFeature: onEachFeature
-            }).addTo(map);
-        });
-    </script>
+    </style>
+  <div class="wrapper">
+    <header>
+      <h1>Header Content</h1>
+    </header>
+    <main>
+      <p>Main content goes here.</p>
+    </main>
+    <footer class="footer">
+      Footer content
+    </footer>
+  </div>
 </body>
 </html>
