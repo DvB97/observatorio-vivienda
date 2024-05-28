@@ -1,19 +1,77 @@
 <style>
   #map {
     width: 100%;
-    height: 87vh;
+    height: 100vh;
   }
-  
+
+  .label {
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="row h-100 vh-100">
   <div class="col-lg-4 col-md-12 h-100 vh-100">
-    <div id="map"></div>
+    <h1 class="text-center">INFORMACION DE LAS MAT</h1>
+    <p class="text-justify">
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+      roots in a piece of classical Latin literature from 45 BC, making it over
+      2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+      College in Virginia, looked up one of the more obscure Latin words,
+      consectetur, from a Lorem Ipsum passage, and going through the cites of
+      the word in classical literature, discovered the undoubtable source. Lorem
+      Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+      Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
+      book is a treatise on the theory of ethics, very popular during the
+      Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+      amet..", comes from a line in section 1.10.32. The standard chunk of Lorem
+      Ipsum used since the 1500s is reproduced below for those interested.
+      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+      Cicero are also reproduced in their exact original form, accompanied by
+      English versions from the 1914 translation by H. Rackham.
+    </p>    
+    <select class="form-select form-select-lg mb-3 dropup" aria-label=".form-select-lg example">
+      <option selected>Selecciona un departamento</option>
+      <option value="AMAZONAS">AMAZONAS</option>
+      <option value="ANCASH">ANCASH</option>
+      <option value="APURIMAC">APURIMAC</option>
+      <option value="AREQUIPA">AREQUIPA</option>
+      <option value="AYACUCHO">AYACUCHO</option>
+      <option value="CAJAMARCA">CAJAMARCA</option>
+      <option value="CALLAO">CALLAO</option>
+      <option value="CUSCO">CUSCO</option>
+      <option value="HUANCAVELICA">HUANCAVELICA</option>
+      <option value="HUANUCO">HUANUCO</option>
+      <option value="ICA">ICA</option>
+      <option value="JUNIN">JUNIN</option>
+      <option value="LA LIBERTAD">LA LIBERTAD</option>
+      <option value="LAMBAYEQUE">LAMBAYEQUE</option>
+      <option value="LIMA">LIMA</option>
+      <option value="LORETO">LORETO</option>
+      <option value="MADRE DE DIOS">MADRE DE DIOS</option>
+      <option value="MOQUEGUA">MOQUEGUA</option>
+      <option value="PASCO">PASCO</option>
+      <option value="PIURA">PIURA</option>
+      <option value="PUNO">PUNO</option>
+      <option value="SAN MARTIN">SAN MARTIN</option>
+      <option value="TACNA">TACNA</option>
+      <option value="TUMBES">TUMBES</option>
+      <option value="UCAYALI">UCAYALI</option>
+  </select>
+  
+  
   </div>
   <div class="col-lg-8 col-md-12 h-100 vh-100">
+    <div id="map"></div>
+  </div>
+  <!-- <div class="col-lg-8 col-md-12 h-100 vh-100">
     <div class="row">
       <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
         AMAZONAS
@@ -91,6 +149,6 @@
         UCAYALI
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 <script src="src/js/mat.js"></script>
