@@ -3,7 +3,8 @@ $(document).ready(function () {
     $("#oeiUnoAcordeonDos").load("./src/views/comp/oei/uno/comp/acordeonDos.html");
     $("#oeiUnoAcordeonTres").load("./src/views/comp/oei/uno/comp/acordeonTres.html");
     $("#oeiUnoAcordeonCuatro").load("./src/views/comp/oei/uno/comp/acordeonCuatro.html");
-    $("#oeiUnoAcordeonCinco").load("./src/views/comp/oei/uno/comp/acordeonCinco.html");
+    $("#oeiUnoAcordeonCinco").load("./src/views/comp/oei/uno/comp/acordeonCinco.html");    
+    $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html");  
 
     $("#oeiDosAcordeonUno").load("./src/views/comp/oei/dos/comp/acordeonUno.html");
     $("#oeiDosAcordeonDos").load("./src/views/comp/oei/dos/comp/acordeonDos.html");
