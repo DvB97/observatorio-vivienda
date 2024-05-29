@@ -1,57 +1,16 @@
-$(document).ready(function () {
-    $("#paginaPrincial").click(function () {
+$("#paginaPrincial").click(function () {
+    $("#body").load("./src/views/landing.html");
+    setTimeout(function () {
         $("#body").load("./src/views/body.html");
-    })
+    }, 200);
 })
 
 $(document).ready(function () {
-    $("#clickReseniaUno").click(function () {
-        $("#body").load("./src/views/comp/1_acerca_oei/reseniaUno.html");
-    })
-})
-
-$(document).ready(function () {
-    $("#clickReseniaDos").click(function () {
-        $("#body").load("./src/views/comp/1_acerca_oei/reseniaDos.html");
-    })
-})
-
-$(document).ready(function () {
-    $("#organigrama").click(function () {
+    $("#accesoAAcercaDe").click(function () {
         $("#body").load("./src/views/landing.html");
         setTimeout(function () {
-            $("#body").load("./src/views/comp/1_acerca_oei/organigrama.html");
-        }, 1000);
-    })
-})
-
-$(document).ready(function () {
-    $("#2_documentos").click(function () {
-        $("#body").load("./src/views/landing.html");
-        setTimeout(function () {
-            $("#body").load("./src/views/comp/2_documentos/documentos.html");
+            $("#body").load("./src/views/comp/acerca_de/acercaDe.html");
         }, 600);
-    })
-})
-
-$(document).ready(function () {
-    $("#4_publicaciones_vivienda_pae2021_estudio1_pnvr2019").click(function () {
-        $("#body").load("./src/views/comp/4_publicaciones/vivienda/pae2021/estudio1_pnvr2019.html");
-    })
-})
-
-$(document).ready(function () {
-    $("#4_publicaciones_vivienda_pae2021_estudio2_percepciones2019").click(function () {
-        $("#body").load("./src/views/comp/4_publicaciones/vivienda/pae2021/estudio2_percepciones2019.html");
-    })
-})
-
-$(document).ready(function () {
-    $("#4_indicadores").click(function () {
-        $("#body").load("./src/views/landing.html");
-        setTimeout(function () {
-            $("#body").load("./src/views/comp/3_indicadores/indicadores.html");
-        }, 600);        
     })
 })
 
@@ -60,7 +19,25 @@ $(document).ready(function () {
         $("#body").load("./src/views/landing.html");
         setTimeout(function () {
             $("#body").load("./src/views/comp/mat/mat.html");
-        }, 600);        
+        }, 600);
+    })
+})
+
+$(document).ready(function () {
+    $("#oei_uno").click(function () {
+        $("#body").load("./src/views/landing.html");
+        setTimeout(function () {
+            $("#body").load("./src/views/comp/oei/uno/uno.html");
+        }, 600);
+    })
+})
+
+$(document).ready(function () {
+    $("#oei_dos").click(function () {
+        $("#body").load("./src/views/landing.html");
+        setTimeout(function () {
+            $("#body").load("./src/views/comp/oei/dos/dos.html");
+        }, 600);
     })
 })
 

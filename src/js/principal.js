@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 $(document).ready(function () {
-    $("#dataMonitoreo").load("./src/views/comp/monitoreo/cards.html");
+    $("#dataMonitoreo").load("./src/views/comp/cards/cards.html");
     $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html");   
 });
 
