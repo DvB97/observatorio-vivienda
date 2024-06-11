@@ -18,7 +18,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="row h-100 vh-100">
-  <div class="col-lg-4 col-md-12 h-100 vh-100">
+  <div class="col-lg-4 col-md-12 h-100 vh-100 position-relative">
     <h1 class="text-center">INFORMACION DE LAS MAT</h1>
     <p class="text-justify">
       Contrary to popular belief, Lorem Ipsum is not simply random text. It has
@@ -36,9 +36,15 @@
       Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
       Cicero are also reproduced in their exact original form, accompanied by
       English versions from the 1914 translation by H. Rackham.
-    </p>    
-    <select class="form-select form-select-lg mb-3 dropup" aria-label=".form-select-lg example">
-      <option selected>Selecciona un departamento</option>
+    </p>
+
+    <h6 class="mt-5 ml-2">FILTRAR POR DEPARTAMENTO</h6>
+    <select
+      id="selectDepartamento"
+      class="form-select ml-2 mr-2 p-2"
+      aria-label="Default select example"
+    >
+      <option selected value="RESET">TODOS</option>
       <option value="AMAZONAS">AMAZONAS</option>
       <option value="ANCASH">ANCASH</option>
       <option value="APURIMAC">APURIMAC</option>
@@ -64,91 +70,11 @@
       <option value="TACNA">TACNA</option>
       <option value="TUMBES">TUMBES</option>
       <option value="UCAYALI">UCAYALI</option>
-  </select>
-  
-  
+    </select>
   </div>
   <div class="col-lg-8 col-md-12 h-100 vh-100">
     <div id="map"></div>
   </div>
-  <!-- <div class="col-lg-8 col-md-12 h-100 vh-100">
-    <div class="row">
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        AMAZONAS
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        ÁNCASH
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        APURÍMAC
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        AREQUIPA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        AYACUCHO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        CAJAMARCA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        CALLAO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        CUSCO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        HUANCAVELICA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        HUÁNUCO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        ICA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        JUNÍN
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        LA LIBERTAD
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        LAMBAYEQUE
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        LIMA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        LORETO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        MADRE DE DIOS
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        MOQUEGUA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        PASCO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        PIURA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        PUNO
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        SAN MARTÍN
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        TACNA
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        TUMBES
-      </div>
-      <div class="col-3 p-2 mx-5 my-3 clickDepartamento text-center">
-        UCAYALI
-      </div>
-    </div>
-  </div> -->
 </div>
+
 <script src="src/js/mat.js"></script>

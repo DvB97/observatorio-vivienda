@@ -94,3 +94,19 @@ $(document).on("click", ".clickDepartamento", function () {
     window.open(linkPath[indice])
 });
 
+document.getElementById('selectDepartamento').addEventListener('change', function() {
+    const selectedValue = this.value;
+    if (selectedValue === 'RESET') {
+        map.setView([-10.450622241808368, -74.63887799107934], 5.5);
+    } else {
+        $.getJSON(geojsonURL, function (data) {
+            data.features.forEach(function(feature) {
+                if (feature.properties.NOMBDEP.trim().toUpperCase() === selectedValue) {
+                    var bounds = L.geoJson(feature).getBounds();
+                    map.fitBounds(bounds);
+                }
+            });
+        });
+    }
+});
+
