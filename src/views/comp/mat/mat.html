@@ -19,58 +19,86 @@
 
 <div class="row h-100 vh-100">
   <div class="col-lg-4 col-md-12 h-100 vh-100 position-relative">
-    <h1 class="text-center">INFORMACION DE LAS MAT</h1>
-    <p class="text-justify">
-      Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-      roots in a piece of classical Latin literature from 45 BC, making it over
-      2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-      College in Virginia, looked up one of the more obscure Latin words,
-      consectetur, from a Lorem Ipsum passage, and going through the cites of
-      the word in classical literature, discovered the undoubtable source. Lorem
-      Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-      Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-      book is a treatise on the theory of ethics, very popular during the
-      Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-      amet..", comes from a line in section 1.10.32. The standard chunk of Lorem
-      Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham.
+    <p class="text-justify px-4 mt-5">
+      La Mesa de asistencia técnica – MAT es un instrumento técnico de gestión
+      que permite generar espacios de coordinación y asesoramiento personalizado
+      entre el MVCS y los Gobiernos regionales, provinciales y distritales y/o
+      EPS, con el objetivo
+      <b
+        ><u
+          >de brindar asistencia técnica para la mejora de la gestión de
+          proyectos incluidos en los ejes, para el cierre de brechas de
+          saneamiento, agua y vivienda</u
+        ></b
+      >.
     </p>
+    <h6 class="px-4">Temas a tratar:</h6>
+    <ul style="margin-left: 20px">
+      <li>Ejecución de obras atrasadas o suspendidas.</li>
+      <li>Reactivación de obras paralizadas.</li>
+      <li>Recepción de obras.</li>
+      <li>Gestión de la PRESET.</li>
+      <li>Gestión del financiamiento de proyectos.</li>
+    </ul>
 
-    <h6 class="mt-5 ml-2">FILTRAR POR DEPARTAMENTO</h6>
-    <select
-      id="selectDepartamento"
-      class="form-select ml-2 mr-2 p-2"
-      aria-label="Default select example"
-    >
-      <option selected value="RESET">TODOS</option>
-      <option value="AMAZONAS">AMAZONAS</option>
-      <option value="ANCASH">ANCASH</option>
-      <option value="APURIMAC">APURIMAC</option>
-      <option value="AREQUIPA">AREQUIPA</option>
-      <option value="AYACUCHO">AYACUCHO</option>
-      <option value="CAJAMARCA">CAJAMARCA</option>
-      <option value="CALLAO">CALLAO</option>
-      <option value="CUSCO">CUSCO</option>
-      <option value="HUANCAVELICA">HUANCAVELICA</option>
-      <option value="HUANUCO">HUANUCO</option>
-      <option value="ICA">ICA</option>
-      <option value="JUNIN">JUNIN</option>
-      <option value="LA LIBERTAD">LA LIBERTAD</option>
-      <option value="LAMBAYEQUE">LAMBAYEQUE</option>
-      <option value="LIMA">LIMA</option>
-      <option value="LORETO">LORETO</option>
-      <option value="MADRE DE DIOS">MADRE DE DIOS</option>
-      <option value="MOQUEGUA">MOQUEGUA</option>
-      <option value="PASCO">PASCO</option>
-      <option value="PIURA">PIURA</option>
-      <option value="PUNO">PUNO</option>
-      <option value="SAN MARTIN">SAN MARTIN</option>
-      <option value="TACNA">TACNA</option>
-      <option value="TUMBES">TUMBES</option>
-      <option value="UCAYALI">UCAYALI</option>
-    </select>
+    <h6 class="px-4">Quienes participan:</h6>
+    <ul style="margin-left: 20px">
+      <li>
+        El MVCS, a través de sus unidades de organización y Programas (PNSR,
+        PNSU, PNVR, PMIB, PNC).
+      </li>
+      <li>Gobiernos Regionales, Municipios Provinciales y Distritales.</li>
+    </ul>
+
+    <h6 class="px-4">Resultados que se buscan con la MAT:</h6>
+    <ul style="margin-left: 20px">
+      <li class="text-justify pr-4">
+        Atender la mayor cantidad de proyectos que aporten a la reducción de
+        brechas.
+      </li>
+      <li class="text-justify pr-4">
+        Los GSN asumen compromisos para adoptar acciones respecto a los
+        proyectos a su cargo.
+      </li>
+      <li class="text-justify pr-4">
+        Los Programas brindan asistencia técnica y realizan seguimiento para el
+        cumplimiento de los compromisos por cada proyecto.
+      </li>
+    </ul>
+
+    <h6 class="px-4">FILTRAR POR DEPARTAMENTO</h6>
+    <div class="row">
+      <div class="col-11">
+        <select id="selectDepartamento" class="form-select ml-4">
+          <option selected value="RESET">TODOS</option>
+          <option value="AMAZONAS">AMAZONAS</option>
+          <option value="ANCASH">ANCASH</option>
+          <option value="APURIMAC">APURIMAC</option>
+          <option value="AREQUIPA">AREQUIPA</option>
+          <option value="AYACUCHO">AYACUCHO</option>
+          <option value="CAJAMARCA">CAJAMARCA</option>
+          <option value="CALLAO">CALLAO</option>
+          <option value="CUSCO">CUSCO</option>
+          <option value="HUANCAVELICA">HUANCAVELICA</option>
+          <option value="HUANUCO">HUANUCO</option>
+          <option value="ICA">ICA</option>
+          <option value="JUNIN">JUNIN</option>
+          <option value="LA LIBERTAD">LA LIBERTAD</option>
+          <option value="LAMBAYEQUE">LAMBAYEQUE</option>
+          <option value="LIMA">LIMA</option>
+          <option value="LORETO">LORETO</option>
+          <option value="MADRE DE DIOS">MADRE DE DIOS</option>
+          <option value="MOQUEGUA">MOQUEGUA</option>
+          <option value="PASCO">PASCO</option>
+          <option value="PIURA">PIURA</option>
+          <option value="PUNO">PUNO</option>
+          <option value="SAN MARTIN">SAN MARTIN</option>
+          <option value="TACNA">TACNA</option>
+          <option value="TUMBES">TUMBES</option>
+          <option value="UCAYALI">UCAYALI</option>
+        </select>
+      </div>
+    </div>
   </div>
   <div class="col-lg-8 col-md-12 h-100 vh-100">
     <div id="map"></div>
