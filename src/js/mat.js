@@ -39,10 +39,7 @@ function onEachFeature(feature, layer) {
                 text: `Se viene coordinando la instalación de la MAT en el departamento de ${departamento}. Pronto tendremos novedades.`,
             }); return
         }
-        $("#body").load("./src/views/landing.html");
-        setTimeout(function () {
-            $("#body").load(linkPath[indice]);
-        }, 300);
+        window.open(linkPath[indice])
     });
 }
 
@@ -69,9 +66,9 @@ var departamentosPeruTilde = [
 ];
 
 var linkPath = [
-    './src/views/comp/mat/mat.html',
-    './src/views/comp/mat/matSanMartin.html',
-    './src/views/comp/mat/mat.html',
+    'https://app.powerbi.com/view?r=eyJrIjoiMjNlZDYxZjMtOGE3Zi00NzUwLTg2YzktNGQ0ZTgwMGI0ODQ3IiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
+    'https://app.powerbi.com/view?r=eyJrIjoiYzg0YjA4MTktYTlkMC00NDlmLTkyOTYtYWEwNWIzZmZjZDBkIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
+    'https://app.powerbi.com/view?r=eyJrIjoiYjk4OGQ1MWUtMjk3ZC00NWM3LWJmMTAtNzczODcxZTNkMGEwIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9    ',
 ];
 
 $(document).ready(function () {
@@ -94,9 +91,6 @@ $(document).on("click", ".clickDepartamento", function () {
             text: `Se viene coordinando la instalación de la MAT en el departamento de ${departamento}. Pronto tendremos novedades.`,
         }); return
     }
-    $("#body").load("./src/views/landing.html");
-    setTimeout(function () {
-        $("#body").load(linkPath[indice]);
-    }, 300);
+    window.open(linkPath[indice])
 });
 
