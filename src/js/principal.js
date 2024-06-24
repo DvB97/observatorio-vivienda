@@ -44,3 +44,12 @@ $(document).ready(function () {
     $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html");   
 });
 
+$(document).ready(function () {
+    $("#clickNoticia1").click(function () {
+        $("#body").load("./src/views/landing.html");
+        setTimeout(function () {
+            $("#body").load("./src/views/comp/otros/notUno.html");
+        }, 600);
+    })
+})
+

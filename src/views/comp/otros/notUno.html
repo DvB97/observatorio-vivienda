@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-lg-8 col-md-6 col-sm-12">
+      <h3>Titulo de la noticia 1</h3>
+      <p class="text-justify">
+        orem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s
+      </p>
+      <img src="src/assets/img/NOTICIAS/1.jpeg" height="40%" width="600vh" />
+      <p>24 de junio de 2024 - 5:15 a. m.</p>
+      <p class="text-justify">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+      <p class="text-justify">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+      <p class="text-justify">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 px-5 mt-5">
+      <div class="row pl-5">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <img
+            onclick="printPage()"
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios/50/print--v1.png"
+            alt="print--v1"
+          />
+          <p>Imprimir</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <img
+            onclick="sharePage()"
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios/50/share--v1.png"
+            alt="print--v1"
+          />
+          <p>Compartir</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <img
+            onclick="bookmarkPage()"
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios/50/bookmark-ribbon--v1.png"
+            alt="print--v1"
+          />
+          <p>Guardar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function printPage() {
+    window.print();
+  }
+  function sharePage() {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: document.title,
+          text: "Echa un vistazo a esta página:",
+          url: window.location.href,
+        })
+        .then(() => console.log("¡Compartido exitosamente!"))
+        .catch((error) => console.error("Error al compartir:", error));
+    } else {
+      alert(
+        "La funcionalidad de compartir no es compatible con este navegador."
+      );
+    }
+  }
+  function bookmarkPage() {
+    alert("Presiona Ctrl+D para guardar esta página en tus marcadores.");
+  }
+</script>
