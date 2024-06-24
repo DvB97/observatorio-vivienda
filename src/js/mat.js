@@ -56,19 +56,22 @@ $.getJSON(geojsonURL, function (data) {
 var departamentosPeru = [
     'APURIMAC',
     'SAN MARTIN',
-    'UCAYALI'
+    'UCAYALI',
+    'LORETO'
 ];
 
 var departamentosPeruTilde = [
     'APURÍMAC',
     'SAN MARTÍN',
-    'UCAYALI'
+    'UCAYALI',
+    'LORETO'
 ];
 
 var linkPath = [
     'https://app.powerbi.com/view?r=eyJrIjoiMjNlZDYxZjMtOGE3Zi00NzUwLTg2YzktNGQ0ZTgwMGI0ODQ3IiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
     'https://app.powerbi.com/view?r=eyJrIjoiYzg0YjA4MTktYTlkMC00NDlmLTkyOTYtYWEwNWIzZmZjZDBkIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
-    'https://app.powerbi.com/view?r=eyJrIjoiYjk4OGQ1MWUtMjk3ZC00NWM3LWJmMTAtNzczODcxZTNkMGEwIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9    ',
+    'https://app.powerbi.com/view?r=eyJrIjoiYjk4OGQ1MWUtMjk3ZC00NWM3LWJmMTAtNzczODcxZTNkMGEwIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
+    'https://app.powerbi.com/view?r=eyJrIjoiYWVkMDE5OWMtNGUxOC00ZDE3LWE3YjUtYTUwZDliY2Y0ZDg5IiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
 ];
 
 $(document).ready(function () {
