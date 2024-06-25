@@ -40,11 +40,21 @@ $(document).ready(function () {
         }, 600);
     })
 })
+
 $(document).ready(function () {
     $("#accesoAindocadores").click(function () {
         window.open('https://app.powerbi.com/view?r=eyJrIjoiM2ExNmI0YjgtN2Y4OC00ZWZhLTk1ZjgtYjJlZGFkZDZhYWMxIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9')
     })
 })
+
+$(document).ready(function () {
+    $(".haciaServicios").click(function () {        
+        $("#body").load("./src/views/body.html#services");
+    });
+});
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

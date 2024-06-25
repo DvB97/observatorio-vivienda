@@ -46,10 +46,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#clickNoticia1").click(function () {
-        $("#body").load("./src/views/landing.html");
-        setTimeout(function () {
-            $("#body").load("./src/views/comp/otros/notUno.html");
-        }, 600);
+        window.open("./src/views/comp/otros/notUno.html")
     })
 })
 
