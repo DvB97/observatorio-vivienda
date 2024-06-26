@@ -19,8 +19,6 @@ function validarEspaciosLlenos(usuario, password) {
 }
 
 function validarLogin(usuario, password) {
-    console.log('usuario', usuario);
-    console.log('password', password);
     var index = USUARIOS.findIndex(x => x == usuario)
     console.log('index', index);
     if ((index !== -1 && PASSWORD[index] != password) || index === -1 && PASSWORD[index] != password) {
@@ -40,9 +38,6 @@ function validarLogin(usuario, password) {
         timer: 1500
     });
     $("#body").load("./src/views/comp/om/om.html");
-
-
-    console.log('encontrado', index);
 }
 
 const USUARIOS = ['admin', 'humberto']
