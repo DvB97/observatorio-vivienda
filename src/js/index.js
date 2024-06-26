@@ -7,4 +7,9 @@ $(document).ready(function () {
     $("#footerContainer").load("./src/views/footer.html");
 });
 
+window.addEventListener('beforeunload', function () {
+    localStorage.clear();
+});
+
+
 
