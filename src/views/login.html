@@ -1,3 +1,5 @@
+
+<script src="src/js/login.js"></script>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +12,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <style>
     .gradient-custom-2 {
@@ -50,19 +53,17 @@
               <div class="row g-0">
                 <div class="col-lg-6">
                   <div class="card-body">
-
-                    <form>
                       <h4 class="text-center my-5">Por favor, ingrese sus credenciales para ingresar</h4>
 
                       <div class="container px-3">
                         <div data-mdb-input-init class="form-outline mb-2">
                           <input
                             type="email"
-                            id="form2Example11"
+                            id="formUsuario"
                             class="form-control"
                             placeholder="USUARIO"
                           />
-                          <label class="form-label" for="form2Example11"
+                          <label class="form-label" for="formUsuario"
                             >Usuario</label
                           >
                         </div>
@@ -70,11 +71,11 @@
                         <div data-mdb-input-init class="form-outline mb-4">
                           <input
                             type="password"
-                            id="form2Example22"
+                            id="formPassword"
                             class="form-control"
                             placeholder="CONTRASEÑA"
                           />
-                          <label class="form-label" for="form2Example22"
+                          <label class="form-label" for="formPassword"
                             >Contraseña</label
                           >
                         </div>
@@ -86,11 +87,11 @@
                           data-mdb-ripple-init
                           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                           type="button"
+                          id="clickEnLogin"
                         >
                           INGRESAR
                         </button>
                       </div>
-                    </form>
                   </div>
                 </div>
                 <div

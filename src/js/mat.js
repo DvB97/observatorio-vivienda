@@ -7,7 +7,7 @@ L.tileLayer('', {
 // Estilo para los departamentos
 function style(feature) {
     var departamento = feature.properties.NOMBDEP.trim().toUpperCase();
-    var fillColor = departamentosPeru.includes(departamento) ? '#198754' : '#C00000';
+    var fillColor = departamentosPeru.includes(departamento) ? '#C00000' : '#837979';
     
     return {
         fillColor: fillColor,

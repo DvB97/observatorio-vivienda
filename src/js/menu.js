@@ -48,8 +48,12 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $(".haciaServicios").click(function () {        
-        $("#body").load("./src/views/body.html#services");
+    $("#accesoAMonitoreo").click(function () {        
+        if(localStorage.getItem('logueado')){
+            $("#body").load("./src/views/comp/om/om.html");
+            return
+        }
+        $("#body").load("./src/views/login.html");
     });
 });
 
