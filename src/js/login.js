@@ -1,4 +1,7 @@
 
+
+var USUARIOS = ['admin', 'humberto']
+var PASSWORD = ['admin', 'humberto']
 $("#clickEnLogin").click(function () {
     var usuario = $("#formUsuario").val();
     var password = $("#formPassword").val();
@@ -19,8 +22,7 @@ function validarEspaciosLlenos(usuario, password) {
 }
 
 function validarLogin(usuario, password) {
-    var index = USUARIOS.findIndex(x => x == usuario)
-    console.log('index', index);
+    var index = USUARIOS?.findIndex(x => x == usuario)
     if ((index !== -1 && PASSWORD[index] != password) || index === -1 && PASSWORD[index] != password) {
         Swal.fire({
             title: "ERROR DE CREDENCIALES",
@@ -29,7 +31,7 @@ function validarLogin(usuario, password) {
         });
         return
     }
-    localStorage.setItem('logueado',true)
+    localStorage.setItem('logueado','1')
     Swal.fire({
         position: "top-end",
         icon: "success",
@@ -39,6 +41,3 @@ function validarLogin(usuario, password) {
     });
     $("#body").load("./src/views/comp/om/om.html");
 }
-
-const USUARIOS = ['admin', 'humberto']
-const PASSWORD = ['admin', 'humberto']

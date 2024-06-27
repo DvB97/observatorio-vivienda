@@ -41,12 +41,24 @@ window.addEventListener('DOMContentLoaded', event => {
 
 $(document).ready(function () {
     $("#dataMonitoreo").load("./src/views/comp/cards/cards.html");
-    $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html");   
-});
-
-$(document).ready(function () {
+    $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html"); 
     $("#clickNoticia1").click(function () {
         window.open("./src/views/comp/otros/notUno.html")
     })
-})
+    $("#clickNoticia2").click(function () {
+        window.open("./src/views/comp/otros/notDos.html")
+    })
+    $("#clickNoticia3").click(function () {
+        window.open("./src/views/comp/otros/notTres.html")
+    })
+    $("#clickNoticia4").click(function () {
+        window.open("./src/views/comp/otros/notCuatro.html")
+    })
+    $("#clickNoticia5").click(function () {
+        window.open("./src/views/comp/otros/notCinco.html")
+    })
+    $("#clickNoticia6").click(function () {
+        window.open("./src/views/comp/otros/notSeis.html")
+    })
+});
 

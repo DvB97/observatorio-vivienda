@@ -48,12 +48,20 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $("#accesoAMonitoreo").click(function () {        
-        if(localStorage.getItem('logueado')){
+    $("#accesoAMonitoreo").click(function () {
+        /* var logueado = localStorage.getItem('logueado');
+        if (logueado == '1') {
+            $("#body").load("./src/views/comp/om/om.html");
+            return
+        }
+        $("#body").load("./src/views/login.html"); */
+        var logueado = localStorage.getItem('logueado');
+        if (logueado == '1') {
             $("#body").load("./src/views/comp/om/om.html");
             return
         }
         $("#body").load("./src/views/login.html");
+
     });
 });
 

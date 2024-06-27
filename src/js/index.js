@@ -8,7 +8,7 @@ $(document).ready(function () {
 });
 
 window.addEventListener('beforeunload', function () {
-    localStorage.clear();
+    localStorage.setItem('logueado','0')
 });
 
 
