@@ -7,8 +7,8 @@ L.tileLayer('', {
 // Estilo para los departamentos
 function style(feature) {
     var departamento = feature.properties.NOMBDEP.trim().toUpperCase();
-    var fillColor = departamentosPeru.includes(departamento) ? '#C00000' : '#837979';
-    
+    var fillColor = departamentosPeru.includes(departamento) ? '#FF8181' : '#D8D8D8';
+
     return {
         fillColor: fillColor,
         weight: 2,
@@ -39,7 +39,7 @@ function onEachFeature(feature, layer) {
                 text: `Se viene coordinando la instalación de la MAT en el departamento de ${departamento}. Pronto tendremos novedades.`,
             }); return
         }
-        window.open(linkPath[indice])
+        window.open(linkPath[indice]);
     });
 }
 
@@ -57,14 +57,24 @@ var departamentosPeru = [
     'APURIMAC',
     'SAN MARTIN',
     'UCAYALI',
-    'LORETO'
+    'LORETO',
+    'AREQUIPA',
 ];
 
 var departamentosPeruTilde = [
     'APURÍMAC',
     'SAN MARTÍN',
     'UCAYALI',
-    'LORETO'
+    'LORETO',
+    'AREQUIPA',
+];
+
+var linksNoticias = [
+    './src/views/comp/otros/notMatApurimac.html',
+    './src/views/comp/otros/notMatSanMartin.html',
+    './src/views/comp/otros/notMatUcayali.html',
+    './src/views/comp/otros/notMatLoreto.html',
+    './src/views/comp/otros/notMatArequipa.html',
 ];
 
 var linkPath = [
@@ -72,6 +82,7 @@ var linkPath = [
     'https://app.powerbi.com/view?r=eyJrIjoiYzg0YjA4MTktYTlkMC00NDlmLTkyOTYtYWEwNWIzZmZjZDBkIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
     'https://app.powerbi.com/view?r=eyJrIjoiYjk4OGQ1MWUtMjk3ZC00NWM3LWJmMTAtNzczODcxZTNkMGEwIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
     'https://app.powerbi.com/view?r=eyJrIjoiYWVkMDE5OWMtNGUxOC00ZDE3LWE3YjUtYTUwZDliY2Y0ZDg5IiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
+    'https://app.powerbi.com/view?r=eyJrIjoiMGRlMTg4OGEtN2RiOC00ZDE1LWI5ODMtM2VjYjFlODJjZmJhIiwidCI6IjhhZmMxYzZhLThjOWYtNDA5My1iMDU1LWU0MTdiMjA5M2IwYyIsImMiOjR9',
 ];
 
 $(document).ready(function () {
@@ -97,16 +108,21 @@ $(document).on("click", ".clickDepartamento", function () {
     window.open(linkPath[indice])
 });
 
-document.getElementById('selectDepartamento').addEventListener('change', function() {
+document.getElementById('selectDepartamento').addEventListener('change', function () {
     const selectedValue = this.value;
     if (selectedValue === 'RESET') {
         map.setView([-10.450622241808368, -74.63887799107934], 5.5);
-        return 
+        return
     } $.getJSON(geojsonURL, function (data) {
-        data.features.forEach(function(feature) {
+        data.features.forEach(function (feature) {
             if (feature.properties.NOMBDEP.trim().toUpperCase() === selectedValue) {
                 var bounds = L.geoJson(feature).getBounds();
                 map.fitBounds(bounds);
+                var indice = departamentosPeru.indexOf(selectedValue)
+                if (indice !== -1)
+                    setTimeout(() => {
+                        window.open(linksNoticias[indice]);
+                    }, 800);
             }
         });
     });

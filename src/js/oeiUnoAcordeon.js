@@ -9,5 +9,8 @@ $(document).ready(function () {
     $("#oeiDosAcordeonUno").load("./src/views/comp/oei/dos/comp/acordeonUno.html");
     $("#oeiDosAcordeonDos").load("./src/views/comp/oei/dos/comp/acordeonDos.html");
     $("#oeiDosAcordeonTres").load("./src/views/comp/oei/dos/comp/acordeonTres.html");
+    $("#oeiDosAcordeonCuatro").load("./src/views/comp/oei/dos/comp/acordeonCuatro.html");
+    $("#oeiDosAcordeonCinco").load("./src/views/comp/oei/dos/comp/acordeonCinco.html");
+    $("#oeiDosAcordeonSeis").load("./src/views/comp/oei/dos/comp/acordeonSeis.html");
 
 });

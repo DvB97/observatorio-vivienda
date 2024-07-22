@@ -1,0 +1,1 @@
+/* document.getElementById("anioActual").textContent = new Date().getFullYear(); */

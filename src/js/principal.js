@@ -43,22 +43,22 @@ $(document).ready(function () {
     $("#dataMonitoreo").load("./src/views/comp/cards/cards.html");
     $("#dataResumenEstudios").load("./src/views/comp/principal/estudios.html"); 
     $("#clickNoticia1").click(function () {
-        window.open("./src/views/comp/otros/notUno.html")
+        window.open("./src/views/comp/otros/notMatArequipa.html")
     })
     $("#clickNoticia2").click(function () {
-        window.open("./src/views/comp/otros/notDos.html")
+        window.open("./src/views/comp/otros/notMatLoreto.html")
     })
     $("#clickNoticia3").click(function () {
-        window.open("./src/views/comp/otros/notTres.html")
+        window.open("./src/views/comp/otros/notMatSanMartin.html")
     })
     $("#clickNoticia4").click(function () {
-        window.open("./src/views/comp/otros/notCuatro.html")
+        window.open("./src/views/comp/otros/notConferencia.html")
     })
     $("#clickNoticia5").click(function () {
-        window.open("./src/views/comp/otros/notCinco.html")
+        window.open("./src/views/comp/otros/notMatApurimac.html")
     })
     $("#clickNoticia6").click(function () {
-        window.open("./src/views/comp/otros/notSeis.html")
+        window.open("./src/views/comp/otros/notMatUcayali.html")
     })
 });
 

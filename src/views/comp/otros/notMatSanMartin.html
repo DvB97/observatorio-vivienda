@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-12 w-100" style="background-color: #c00000; height: 70px">
+        <div class="container">
+          <h3 style="color: white; padding-top: 15px; padding-bottom: 15px">
+            Mesa de Asistencia Técnica (MAT) en la región de San Martín
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-lg-8 col-md-6 col-sm-12">
+          <p style="text-align: justify">
+            LMás de 95 funcionarios de los Gobiernos Locales y Regional de la
+            región San Martín recibieron asistencia técnica sobre sus proyectos
+            de agua, saneamiento y vivienda
+          </p>
+          <div class="row">
+            <div class="col-l2">
+              <img
+                id="mainImage"
+                src="../../../assets/img/NOTICIAS/matSanMartin_1.jpeg"
+                height="90%"
+                width="860vh"
+              />
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+              <img
+                src="../../../assets/img/NOTICIAS/matSanMartin_1.jpeg"
+                height="100%"
+                width="200vh"
+                onclick="enlargeImage(this)"
+              />
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+              <img
+                src="../../../assets/img/NOTICIAS/matApurimac_1.jpeg"
+                height="100%"
+                width="200vh"
+                onclick="enlargeImage(this)"
+              />
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+              <img
+                src="../../../assets/img/NOTICIAS/matArequipa_1.jpeg"
+                height="100%"
+                width="200vh"
+                onclick="enlargeImage(this)"
+              />
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+              <img
+                src="../../../assets/img/NOTICIAS/matUcayali_1.jpeg"
+                height="100%"
+                width="200vh"
+                onclick="enlargeImage(this)"
+              />
+            </div>
+          </div>
+          <p>21 de mayo de 2024 – 10:30 am</p>
+          <p style="text-align: justify">
+            La Mesa de Asistencia Técnica (MAT) San Martín se llevó a cabo el 21
+            de mayo de 2024 en el Auditorio de la Municipalidad Distrital de
+            Pacucha. En el evento, más de 54 funcionarios de los gobiernos
+            locales y regionales recibieron asistencia técnica sobre sus
+            proyectos de agua, saneamiento y vivienda
+          </p>
+          <p style="text-align: justify">
+            La MAT contó con la participación de la ministra de Vivienda,
+            Construcción y Saneamiento, Hania Pérez de Cuéllar (virtualmente),
+            el viceministro de Vivienda y Urbanismo, Hernán Jesús Navarro
+            Franco, y altos funcionarios locales, entre ellos el Gobernador
+            Regional de Apurímac, el alcalde provincial de Andahuaylas y los
+            alcaldes distritales de Andarapa, Turpo, Kishuara, Huancaray,
+            Huanipaca, Pacucha, Pampachiri, Ranracancha, San Jerónimo y Santa
+            María de Chicmo.
+          </p>
+          <p style="text-align: justify">
+            Pérez de Cuéllar lideró la mesa de asistencia técnica y anunció que
+            este año más de 48,000 personas en la región Apurímac accederán a
+            servicios de agua potable en sus hogares, en el marco de la política
+            de su gestión para cerrar la brecha de saneamiento en el país.
+            Además, detalló que actualmente están en ejecución 12 obras de agua
+            y saneamiento, de las cuales diez se culminarán en 2024 y las otras
+            dos en 2025.
+          </p>
+          <p style="text-align: justify">
+            Los resultados de la encuesta de satisfacción sobre la MAT Apurímac
+            fueron muy positivos. Más del 95% de los asistentes manifestaron
+            estar satisfechos con el evento realizado en su región. El 60%
+            expresó satisfacción con la asistencia técnica brindada a sus
+            proyectos, y más del 85% calificó con buena o aceptable la calidad
+            de las exposiciones realizadas.
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 px-5 mt-5">
+          <div class="row pl-5">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img
+                onclick="printPage()"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios/50/print--v1.png"
+                alt="print--v1"
+              />
+              <p>Imprimir</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img
+                onclick="sharePage()"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios/50/share--v1.png"
+                alt="print--v1"
+              />
+              <p>Compartir</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img
+                onclick="bookmarkPage()"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios/50/bookmark-ribbon--v1.png"
+                alt="print--v1"
+              />
+              <p>Guardar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function printPage() {
+        window.print();
+      }
+      function sharePage() {
+        if (navigator.share) {
+          navigator
+            .share({
+              title: document.title,
+              text: "Echa un vistazo a esta página:",
+              url: window.location.href,
+            })
+            .then(() => console.log("¡Compartido exitosamente!"))
+            .catch((error) => console.error("Error al compartir:", error));
+        } else {
+          alert(
+            "La funcionalidad de compartir no es compatible con este navegador."
+          );
+        }
+      }
+      function bookmarkPage() {
+        alert("Presiona Ctrl+D para guardar esta página en tus marcadores.");
+      }
+
+      function enlargeImage(img) {
+        var mainImage = document.getElementById("mainImage");
+        mainImage.src = img.src;
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

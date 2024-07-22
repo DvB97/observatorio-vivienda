@@ -70,3 +70,9 @@ const barChart = new Chart(ctx, {
     options: options,
     plugins: [ChartDataLabels]
 });
+
+$(document).ready(function () {
+    $("#clickHaciaEstudios").click(function () {
+        $("#body").load("/src/views/comp/oei/dos/dos.html");
+    })
+})
